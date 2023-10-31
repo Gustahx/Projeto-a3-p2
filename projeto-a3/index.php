@@ -4,6 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body {
+		background: linear-gradient(-200deg, #87CEFA 10%, rgba(47, 79, 79, 100) 50%) no-repeat; 	
+		}
+	</style>
 	<title>Segurança</title>
 </head>
 <body>
