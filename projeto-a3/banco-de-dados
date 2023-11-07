@@ -53,4 +53,5 @@ WHERE login = 'gerente'
 UPDATE login SET senha = MD5(senha)
 WHERE login = 'admin'
 
-
+delete from login where login = 'gerente'
+delete from usuario where nome = 'gerente'
