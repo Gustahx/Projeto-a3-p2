@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+include('conexao.php');
+include('validaradmin.php')
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt- BR">
@@ -11,7 +17,6 @@
 </head>
 <body>
     <center>
-
 
     </center>
 </body>
