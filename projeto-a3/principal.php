@@ -4,7 +4,9 @@ session_start();
 
 include('conexao.php');
 include('funcoes.php');
-include('validarlogin.php')
+include('validarlogin.php');
+
+$nivel = $_SESSION['nivel'];
 
 ?>
 <link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
@@ -24,7 +26,11 @@ include('validarlogin.php')
 <body>
     <center>
        <a href="addusuario.php">
-        Adicionar Usuário</a><br>
+        Adicionar Usuário</a> |
+        <?php
+        if($nivel == 1) { ?>
+         <a href="mudaracesso.php">Mudar Acesso</a>
+         <?php } ?><br>
         <a href="logout.php">Sair</a>
     </center>
 </body>
