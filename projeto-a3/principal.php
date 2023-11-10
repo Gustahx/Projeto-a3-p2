@@ -4,6 +4,7 @@ session_start();
 
 include('conexao.php');
 include('funcoes.php');
+include('validarlogin.php')
 
 ?>
 <link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
@@ -23,7 +24,8 @@ include('funcoes.php');
 <body>
     <center>
        <a href="addusuario.php">
-        Adicionar Usuário</a>
+        Adicionar Usuário</a><br>
+        <a href="logout.php">Sair</a>
     </center>
 </body>
 </html>
