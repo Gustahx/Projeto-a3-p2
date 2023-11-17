@@ -5,17 +5,18 @@ include('funcoes.php');
 
 $login = isset($_POST['login']) ? $_POST['login'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
-$senha_criptografada = criptografar($senha);
+
+$senhacriptografada = criptografar($senha);
 
 $select = "SELECT login, senha, nivel FROM login 
-			WHERE login = '$login' AND senha = '$senha_criptografada'";
+			WHERE login = '$login' AND senha = '$senhacriptografada'";
 $query = mysqli_query($conexao, $select);
 $dados = mysqli_fetch_row($query);
 
-if (isset($dados[0]) == $login && isset($dados[1]) == $senha_criptografada) {
+if (isset($dados[0]) == $login && isset($dados[1]) == $senhacriptografada) {
 	session_start();
-	$_SESSION['login'] = $dado[0];
-	$_SESSION['nivel'] = $dado[2];
+	$_SESSION['login'] = $dados[0];
+	$_SESSION['nivel'] = $dados[2];
 	$_SESSION['logado'] = true;
 	header('Location: principal.php');
 } else {
