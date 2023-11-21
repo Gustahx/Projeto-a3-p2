@@ -15,6 +15,7 @@ $queryselect = mysqli_query($conexao, $select);
 
 ?>
 
+<link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@ $queryselect = mysqli_query($conexao, $select);
             top:50%;
             left:50%;
             width: 700px;
-            padding:250px;
+            padding:250px;	
         }
     </style>
 	<title></title>
