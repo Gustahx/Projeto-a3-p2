@@ -10,6 +10,13 @@ $select = "SELECT nome, cpf, telefone FROM usuario WHERE cpf = '$cpf'";
 $query = mysqli_query($conexao, $select);
 $dados = mysqli_fetch_row($query);
 
+$telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
+if($telefone <> NULL) {
+$update = "UPDATE  usuario SET telefone = '$telefone'";
+$queryupdate = mysqli_query($conexao, $update);
+ header('Location: alterardados.php');
+}
+
 ?>
 
 <link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
@@ -32,25 +39,23 @@ $dados = mysqli_fetch_row($query);
 </head>
 <body>
     <center>
-        <form id="form-altera" action="#" method="POST">
-	        <table>
-	        <tr>
-					<td>Nome</td>
-	                <td>CPF</td>
-	                <td>Telefone</td>
-			<td>Atualizar</td>
-		</tr>
-				</tr>
-	            <tr>
-	                <td><?php echo $dados[0] ?></td>
-	                <td><?php echo $dados[1] ?></td>
-	                <td><input type="text" name="Telefone" value="<?php echo $dados[2] ?>"></td>
-			<td><input type="submit" name="atualizar" value="Atualizar"</td>
-	            </tr>
-	        </table>
-	        <br><br>    
-	       <a href="principal.php"><input type="button" value="Sair"></a>
-	</form>	
-   </center>	       
+        <form id="form-altera" action="#" method="POST"></form>
+        <table>
+        <tr>
+				<td>Nome</td>
+                <td>CPF</td>
+                <td>Telefone</td>
+                <td>Atualizar</td>
+			</tr>
+            <tr>
+                <td><?php echo $dados[0] ?></td>
+                <td><?php echo $dados[1] ?></td>
+                <td><input type="text" name="Telefone" value="<?php echo $dados[2] ?>"></td>
+                <td><input type="submit" name="atualizar" value="Atualizar"></td>
+            </tr>
+        </table>
+        <br><br>    
+       <a href="principal.php"><input type="button" value="Sair">
+    </center>
 </body>
 </html>
