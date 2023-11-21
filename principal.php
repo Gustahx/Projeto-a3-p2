@@ -9,6 +9,8 @@ $nivel = $_SESSION['nivel'];
 
 ?>
 
+<link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +27,8 @@ $nivel = $_SESSION['nivel'];
             <?php }
 			if ($nivel == 1) { ?>
                 <a href="mudaracesso.php"><input type="button" name="Mudar Acesso" value="Mudar Acesso"></a><br><br>
+                <a href="alterardados.php"><input type="button" value="Alterar Dados"></a>
+                <br><br>
 		<?php } ?>
         <a href="logout.php"><input type="button" name="Sair" value="Sair"></a>
 	</center>
