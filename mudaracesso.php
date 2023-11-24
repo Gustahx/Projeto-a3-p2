@@ -12,6 +12,8 @@ $queryselect = mysqli_query($conexao, $select);
 
 ?>
 
+
+<link rel="icon" type="image/png" href="https://www.shareicon.net/data/128x128/2015/10/03/111567_development_512x512.png"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,13 +38,13 @@ $queryselect = mysqli_query($conexao, $select);
 				<td>Nome</td>
 			</tr>
 			<?php
-			while ($linha = mysqli_fetch_row($queryselect)) { ?>
+			while ($linha = mysqli_fetch_row($queryselect)) {  ?>
 			<tr>
 				<td><a href="chamausuario.php?cod=<?php echo $linha[3] ?>"><?php echo $linha[0] ?></a></td>
 			</tr>
 		<?php } ?>
 		</table>
-		</form>
+		</form><br><br>
 		<a href="principal.php">Voltar</a>
 	</center>
 </body>
