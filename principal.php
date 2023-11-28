@@ -21,14 +21,15 @@ $nivel = $_SESSION['nivel'];
 	<center>
 		<?php
 		if ($nivel < 3) { ?>
-		<a href="addusuario.php">Adicionar Usuário</a><br>
+		<a href="addusuario.php"><input type="button" value="Adicionar Usuário"></a><br><br>
 		<?php }
 			if ($nivel == 1) { ?>
-			<a href="mudaracesso.php">Mudar Acesso</a><br>
-		<?php } ?> | 
-		<a href="alterardados.php">Alterar Dados</a>
+			<a href="mudaracesso.php"><input type="button" value="Mudar Acesso"></a><br><br>
+		<?php } ?> 
+		<a href="alterardados.php"><input type="button" value="Alterar Dados"></a><br>
 		<br>
-		<a href="logout.php">Sair</a>
+		<a href="pesquisarcnpj.php"><input type="button" value="Pesquisar CNPJ"></a><br><br>
+		<a href="logout.php"><input type="button" value="Sair"></a>
 	</center>
 </body>
 </html>
